@@ -368,8 +368,8 @@
 
 <section id="project">
   <div class="wrap reveal">
-    <div class="eyebrow">featured project</div>
-    <h2>VIP Number Wala</h2>
+    <div class="eyebrow">projects</div>
+    <h2>Things I've shipped</h2>
     <div class="project-card">
       <div class="project-top">
         <div>
@@ -410,8 +410,55 @@
           </div>
         </div>
 
+        <div class="lessons">
+          <div class="label">// lessons learned — what I'd fix next</div>
+          <ul>
+            <li>Admin password is currently stored in a publicly readable table and checked client-side — needs a proper auth layer.</li>
+            <li>Bank/UPI details are exposed via the public anon key — should move behind a server function.</li>
+            <li>No server-side validation yet, so the enquiry forms are open to spam via direct API calls.</li>
+          </ul>
+        </div>
+
         <div class="project-links">
           <a class="btn btn-primary" href="https://vipnumberwala.com" target="_blank" rel="noopener">visit live site →</a>
+          <a class="btn btn-ghost" href="https://github.com/Tanishdete333" target="_blank" rel="noopener">more on github</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Note Wall -->
+    <div class="project-card reveal" style="margin-top:32px;">
+      <div class="project-top">
+        <div>
+          <h3>Note Wall</h3>
+          <div class="by">personal project · private sticky-note board with auth</div>
+        </div>
+        <span class="live-badge">● live in production</span>
+      </div>
+      <div class="project-body">
+        <p class="desc">A personal sticky-note board where users can pin, color-tag, and delete notes. Every user's board is fully private — notes are isolated per account via Clerk authentication. Built end-to-end: REST API, MongoDB schema, auth layer, and React frontend, all from scratch.</p>
+
+        <div class="arch-grid">
+          <div class="arch-item">
+            <div class="label">FRONTEND</div>
+            <p>React + Vite for fast, component-driven UI. Clerk handles the auth UI layer out of the box.</p>
+          </div>
+          <div class="arch-item">
+            <div class="label">BACKEND</div>
+            <p>Node.js + Express.js REST API with Mongoose ODM. Deployed on Render.</p>
+          </div>
+          <div class="arch-item">
+            <div class="label">DATABASE</div>
+            <p>MongoDB Atlas — cloud-hosted, with Mongoose schemas for structured note storage.</p>
+          </div>
+          <div class="arch-item">
+            <div class="label">AUTH</div>
+            <p>Clerk — per-user data isolation so every board is private. Frontend on Vercel.</p>
+          </div>
+        </div>
+
+        <div class="project-links">
+          <a class="btn btn-primary" href="https://getnotewall.vercel.app/" target="_blank" rel="noopener">visit live site →</a>
           <a class="btn btn-ghost" href="https://github.com/Tanishdete333" target="_blank" rel="noopener">more on github</a>
         </div>
       </div>
